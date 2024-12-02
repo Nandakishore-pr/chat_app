@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  height: 100vh; 
+}
+
+.left-section {
+  width: 30%; /* 30% width for the profile section */
+  background-color: #5a5a5a;
+  padding: 10px;
+  overflow-y: auto; /* Scrollable if content exceeds */
+  border-right: 3px solid #ccc;
+  
+}
+
+.right-section {
+  width: 70%; /* 70% width for the chat area */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  background-image: url(../assets/background.jpg);
+  background-position: center;
+  background-size: cover;
+ 
+}
+.first-text{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgb(31, 31, 31);
+}

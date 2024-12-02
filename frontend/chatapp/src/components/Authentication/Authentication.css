@@ -1,0 +1,58 @@
+/* Center container */
+
+/* logincontainer CSS */
+.logincontainer {
+  background-image: url('../../assets/background.jpg'); /* Path to image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+} 
+
+  .loginform-container {
+    background-color: #e0e3f0;
+    padding: 40px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+  }
+  
+  h2 {
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Form input styling */
+  .loginform-group {
+    margin-top: 20px;
+  }
+  
+  /* Full-width input styling */
+  .text {
+    width: 100%;
+    
+  }
+  
+  /* Add margin to the bottom of the phone number field */
+  .form-group:last-child {
+    margin-bottom: 30px;
+  }
+  
+  /* Login button styling */
+  .login {
+    margin-top: 45px;
+    /* width: 140px;
+    height: 40px;
+    border: #333;
+    border-color: #0e0e0e;
+    border-radius: 7px;
+    font-size: 20px; */
+
+  }
+  
+ 
