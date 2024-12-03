@@ -2,7 +2,7 @@
 
 /* logincontainer CSS */
 .logincontainer {
-  background-image: url('../../assets/background.jpg'); /* Path to image */
+  /* background-image: url('../../assets/background.jpg');  */
   background-size: cover;
   background-position: center;
   min-height: 100vh;

@@ -57,25 +57,37 @@ const ChatArea = ({ selectedUser }) => {
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-messages">
-        {selectedUser ? (
-          <div className="profile">
-            <h1>{selectedUser.name}</h1>
-          </div>
-        ) : (
-          <h1>No user selected</h1>
-        )}
+      <div className="chat-container">
+        <div className="chat-messages">
+          {selectedUser ? (
+            <div className="profile">
+              <h1>{selectedUser.name}</h1>
+            </div>
+          ) : (
+            <h1>No user selected</h1>
+          )}
 
-        {messages.map((msg, index) => (
-          <div 
-            key={index} 
-            className={`message-item ${msg.sender_id === loggedInUserId ? 'sent' : 'received'}`}
-          >
-            <p>{msg.sender_id === loggedInUserId ? 'You' : selectedUser.name}: {msg.message}</p>
-          </div>
-        ))}
-      </div>
+          {messages.map((msg, index) => {
+            const isSentByLoggedInUser = msg.sender_id === loggedInUserId;
+
+            return (
+              <div
+                key={index}
+                className={`message-item ${isSentByLoggedInUser ? 'sent' : 'received'}`}
+              >
+                {/* Sender's name */}
+                <div className="message-sender">
+                  {isSentByLoggedInUser ? 'You' : selectedUser.name}
+                </div>
+                {/* Message content */}
+                <div className="message-content">
+                  {msg.message}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
 
       <form onSubmit={handleSend}>
         <div className="chat-input">
@@ -86,7 +98,8 @@ const ChatArea = ({ selectedUser }) => {
             style={{ height: `${textareaHeight}px` }} // Dynamically set height
           />
           <button className="send-button" type="submit">
-            ↑
+            {/* ↑ */}
+            SEND
           </button>
         </div>
       </form>
@@ -96,3 +109,4 @@ const ChatArea = ({ selectedUser }) => {
 };
 
 export default ChatArea;
+  
